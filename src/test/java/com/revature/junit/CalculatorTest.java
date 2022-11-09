@@ -149,7 +149,7 @@ public class CalculatorTest {
     }
 
     // method sources need to be static and public!!!
-    public static List<Arguments> addParameters() {
+    public static Stream<Arguments> addParameters() {
         Random random = new Random();
         List<Arguments> argumentsList = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
@@ -162,7 +162,7 @@ public class CalculatorTest {
                     )
             );
         }
-        return argumentsList;
+        return argumentsList.stream();
     }
 
 }
